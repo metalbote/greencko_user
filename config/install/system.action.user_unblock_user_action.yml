@@ -1,0 +1,10 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user_unblock_user_action
+label: 'Ausgewählte Benutzer entsperren'
+type: user
+plugin: user_unblock_user_action
+configuration: {  }

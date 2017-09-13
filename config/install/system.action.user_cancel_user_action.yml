@@ -1,0 +1,10 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user_cancel_user_action
+label: 'Ausgewählte Benutzerkonten löschen'
+type: user
+plugin: user_cancel_user_action
+configuration: {  }

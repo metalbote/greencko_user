@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user_search
+label: Benutzer
+path: user
+weight: 0
+plugin: user_search
+configuration: {  }

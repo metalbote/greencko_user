@@ -1,0 +1,10 @@
+langcode: de
+status: true
+dependencies: {  }
+id: personal
+label: 'Persönliches Kontaktformular'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Ihre Nachricht wurde gesendet.'
+redirect: ''
