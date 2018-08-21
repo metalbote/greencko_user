@@ -1,12 +1,12 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
     - user
 id: who_s_online
-label: 'Wer ist online Block'
+label: 'Who''s online block'
 module: user
-description: 'Zeigt die Benutzernamen der zuletzt aktiven Benutzer und die Gesamtzahl der aktiven Benutzer.'
+description: 'Shows the user names of the most recently active users, and the total number of active users.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -123,8 +123,8 @@ display:
           exposed: false
           expose:
             operator_id: access_op
-            label: 'Letzter Zugriff'
-            description: 'Ein Benutzer gilt für diesen Zeitraum als „online“, nachdem er das letzte Mal eine Seite betrachtet hat.'
+            label: 'Last access'
+            description: 'A user is considered online for this long after they have last viewed a page.'
             use_operator: false
             operator: access_op
             identifier: access
@@ -166,7 +166,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: access
-      title: 'Wer ist online'
+      title: 'Who''s online'
       header:
         result:
           id: result
@@ -176,7 +176,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Derzeit sind @total Benutzer online.'
+          content: 'There are currently @total users online.'
           plugin_id: result
       footer: {  }
       empty:
@@ -189,7 +189,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'Derzeit sind 0 Benutzer online.'
+          content: 'There are currently 0 users online.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
@@ -204,11 +204,11 @@ display:
   who_s_online_block:
     display_plugin: block
     id: who_s_online_block
-    display_title: 'Wer ist online'
+    display_title: 'Who''s online'
     position: 1
     display_options:
-      block_description: 'Wer ist online'
-      display_description: 'Eine Liste der derzeit angemeldeten Benutzer.'
+      block_description: 'Who''s online'
+      display_description: 'A list of users that are currently logged in.'
       display_extenders: {  }
     cache_metadata:
       contexts:

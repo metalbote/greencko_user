@@ -1,0 +1,7 @@
+greencko_user.settings:
+  path: '/admin/config/greencko/user'
+  defaults:
+    _form: 'Drupal\greencko_user\Form\GreenckoUserSettingsForm'
+    _title: 'User Settings'
+  requirements:
+    _permission: 'access greencko settings'

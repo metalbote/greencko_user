@@ -1,7 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: customer
-label: Customer
-weight: 2
-is_admin: false

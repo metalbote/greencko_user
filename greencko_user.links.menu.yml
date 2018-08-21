@@ -1,0 +1,6 @@
+greencko_user.settings:
+  title: 'User settings'
+  parent: greencko_core.settings_index
+  description: 'Change settings related to login and users'
+  route_name: greencko_user.settings
+  weight: 0

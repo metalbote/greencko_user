@@ -1,7 +1,11 @@
-langcode: de
+langcode: en
 status: true
 dependencies: {  }
 id: anonymous
-label: Gast
-weight: 0
+label: 'Anonymous user'
+weight: -10
 is_admin: false
+permissions:
+  - 'access content'
+  - 'search content'
+  - 'view media'

@@ -1,0 +1,44 @@
+<?php
+
+use Drupal\user\Entity\User;
+use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function greencko_user_block_view_varbase_dashboard_user_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+}
+
+/**
+ * Pre-render callback for block user_login_block.
+ *
+ * Adds a link to the username reminder page.
+ */
+function _greencko_user_varbase_dashboard_user_block_pre_render(array $build) {
+  $user = User::load(\Drupal::currentUser()->id());
+  $destination = drupal_get_destination();
+  $options = [
+    $destination,
+  ];
+  $name = \Drupal::l($user->getUsername(), new Url('entity.user.edit_form', [
+    'user' => $user->id(),
+    $options,
+  ]));
+  $url = new Url('entity.user.edit_form', ['user' => $user->id(), $options]);
+
+  $markup = ' <div class="card-image">';
+  $markup .= '<img src="https://lorempixel.com/100/190/nature/6">';
+  $markup .= '</div>';
+  $markup .= '<div class="card-stacked">';
+  $markup .= '<div class="card-content">';
+  $markup .= '<span class="card-title">Welcome back<br/>' . $name . '</span>';
+  $markup .= '</div>';
+  $markup .= '<div class="card-action">';
+  $markup .= ' <a href="' . $url->tostring() . '">' . t('Edit Account') . '</a>';
+  $markup .= '</div>';
+  $markup .= '</div>';
+
+  $build['content']['#markup'] = $markup;
+  return $build;
+}

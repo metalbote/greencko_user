@@ -1,4 +1,2 @@
-bundle: greencko
-excluded:
-  - block.block.bootstrap_account_menu
-required: true
+bundle: Greencko
+

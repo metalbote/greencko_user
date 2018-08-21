@@ -1,9 +1,9 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
     - user
 id: user.compact
-label: Kompakt
+label: Compact
 targetEntityType: user
 cache: true

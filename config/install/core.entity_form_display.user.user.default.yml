@@ -1,12 +1,18 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
   module:
-    - image
+    - datetime
+    - field_layout
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -18,8 +24,30 @@ content:
   contact:
     weight: 5
     region: content
+  field_last_password_reset:
+    type: datetime_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_password_expiration:
+    type: boolean_checkbox
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  google_analytics:
+    weight: 3
+    region: content
   language:
     weight: 0
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
     region: content
   timezone:
     weight: 6
@@ -32,5 +60,4 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden:
-  langcode: true
+hidden: {  }

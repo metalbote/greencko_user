@@ -1,4 +1,4 @@
-anonymous: Gast
+anonymous: Anonymous
 verify_mail: true
 notify:
   cancel_confirm: true
@@ -13,4 +13,4 @@ register: admin_only
 cancel_method: user_cancel_block
 password_reset_timeout: 86400
 password_strength: true
-langcode: de
+langcode: en

@@ -1,18 +1,30 @@
-name: Benutzer
-description: 'Provide Benutzer related configuration.'
+name: 'Greencko User'
+description: 'Provide User related configuration.'
 type: module
 core: 8.x
+version: 8.x-6.x-dev
+package: Greencko
 dependencies:
-  - block
-  - contact
+  - blazy
+  - captcha
+  - datetime
+  - ds
+  - entity_browser
   - field
+  - field_group
+  - field_layout
   - file
-  - greencko_media
   - image
+  - inline_entity_form
+  - layout_discovery
+  - login_destination
+  - media
+  - page_manager
+  - panels
+  - password_policy
   - rdf
-  - search
-  - system
-  - user
+  - roleassign
+  - total_control
   - views
-version: 8.x-1.0
-package: 'Greencko Drupal Distribution'
+  - user
+  - userprotect

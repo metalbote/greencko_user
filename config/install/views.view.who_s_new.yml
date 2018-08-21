@@ -1,12 +1,12 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
     - user
 id: who_s_new
-label: 'Neue Mitglieder'
+label: 'Who''s new'
 module: user
-description: 'Zeigt eine Liste der neuesten Benutzerkonten der Website.'
+description: 'Shows a list of the newest user accounts on the site.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -157,7 +157,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: created
-      title: 'Neue Mitglieder'
+      title: 'Who''s new'
       header: {  }
       footer: {  }
       empty: {  }
@@ -174,12 +174,12 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Neue Mitglieder'
+    display_title: 'Who''s new'
     position: 1
     display_options:
-      display_description: 'Eine Liste neuer Benutzer'
-      block_description: 'Neue Mitglieder'
-      block_category: Benutzer
+      display_description: 'A list of new users'
+      block_description: 'Who''s new'
+      block_category: User
       display_extenders: {  }
     cache_metadata:
       contexts:
